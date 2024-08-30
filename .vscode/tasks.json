@@ -10,6 +10,10 @@
             "windows": {
                 "command": "mingw32-make -j V=1"
             },
+            "linux": {
+                "command": "make -j V=1"
+            },
+            "command": "make -j V=1",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -25,6 +29,9 @@
             "windows": {
                 "command": "rmdir /s /q ${workspaceFolder}\\build"
             },
+            "linux": {
+                "command": "make clean"
+            },
             "problemMatcher": [],
         },
         {
@@ -35,6 +42,9 @@
             },
             "windows": {
                 "command": "mingw32-make flash"
+            },
+            "linux": {
+                "command": "make flash"
             },
             "dependsOn": [
                 "build"
